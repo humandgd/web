@@ -37,6 +37,7 @@ section{
     height: 60vh;
     background-color: #ed5959;
     color: #fff;
+    margin: 0 auto;
 }
 @keyframes kiyasu {
     0%{
