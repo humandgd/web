@@ -3,87 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>レジメサイト</title>
+    <title>K's Glallery - レジメサイト</title>
     <!-- ここでGoogleフォントを読み込ませる -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    
     <style>
         *{
-    margin:0;
-    padding:0;
-}
-.top{
-    background-image: url(../top.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    text-align: center;
-}
-.prof{
-    background-color: #515151;
-    text-align: center;
-}
-section{
-    height:100vh;
-}
-.pacifico-regular {
-    font-family: "Pacifico", cursive;
-    font-weight: 400;
-    font-style: normal;
-}
-.top h1{
-    font-size: 7rem;
-    color: #ffffff;
-    padding-top: 30vh;
-    animation:kiyasu 3s forwards;
-    opacity: 0;
-}
-.prof h2{
-    font-size: 5rem;
-    color: #fff;
-    padding-top: 10vh;
-}
-.box {
-    width: 60vw;
-    height: 60vh;
-    background-color: #ed5959;
-    color: #fff;
-    margin: 0 auto;
-}
-@keyframes kiyasu {
-    0%{
-        opacity: 0;
-        transform: translateY(100px);
-    }
-    100%{
-        opacity: 1;
-        transform: translateY(0px);
-        transform: scale(1.8);
-        color:rgb(156, 255, 250);
-    }
-}
-@keyframes op {
-    0%{
-        transform: translateY(0);
-        transform-origin: top;
-    }
-    100%{
-        transform: translateY(0);
-        transform-origin: bottom;
-    }
-}
+            margin:0;
+            padding:0;
+        }
+        :root{
+            --bg:#333;
+        }
+
+        header {
+            position: relative;
+        
+        }
+        .header-text{
+            position:absolute;
+            top:0;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+            text-align: center;
+        }
+        
+
+        header video {
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        .header-text, .header-pattern, header video{
+            width:100vw;
+            height:90vh;
+        }
+
+
+        .prof{
+            background-color: #515151;
+            text-align: center;
+        }
+        section{
+            height:100vh;
+        }
+        .pacifico-regular {
+            font-family: "Pacifico", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+        
+        h1{
+            font-size: 6rem;
+            color: #ffffff;
+            animation:kiyasu 3s forwards;
+            opacity: 0;
+        }
+
+        .header-pattern{
+            position: absolute;
+            z-index:1;
+            background-size: auto auto;
+            background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, var(--bg) 2px, var(--bg) 4px);
+        }
+        
+        .prof h2{
+            font-size: 5rem;
+            color: #fff;
+            padding-top: 10vh;
+        }
+        @keyframes kiyasu {
+            0%{
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100%{
+                opacity: 1;
+                transform: translateY(0px);
+                transform: scale(1.8);
+                color:rgb(156, 255, 250);
+            }
+        }
+        @keyframes op {
+            0%{
+                transform: translateY(0);
+                transform-origin: top;
+            }
+            100%{
+                transform: translateY(0);
+                transform-origin: bottom;
+            }
+        }
     </style>
 </head>
 <body>
-<section class="top">
-    <h1 class="pacifico-regular">K's Gallery</h1>
-</section>
+<header>
+    <h1 class="header-text pacifico-regular">K's Glallery</h1>
+    <div class="header-pattern"></div>
+    <video src="top.mp4" autoplay loop muted></video>
+</header>
 
 <section class="prof">
     <h2 class="pacifico-regular">Profile</h2>
     <div class="box">
-        ここにプロフィールを書いていく。
-        色々と更新していく。
+
     </div>
 </section>
 </body>
