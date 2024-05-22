@@ -32,6 +32,12 @@ section{
     color: #fff;
     padding-top: 10vh;
 }
+.box {
+    width: 60vw;
+    height: 60vh;
+    background-color: #ed5959;
+    color: #fff;
+}
 @keyframes kiyasu {
     0%{
         opacity: 0;
