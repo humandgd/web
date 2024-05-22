@@ -1,0 +1,56 @@
+*{
+    margin:0;
+    padding:0;
+}
+.top{
+    background-image: url(top.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+.prof{
+    background-color: #515151;
+    text-align: center;
+}
+section{
+    height:100vh;
+}
+.pacifico-regular {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.top h1{
+    font-size: 8rem;
+    color: #ffffff;
+    padding-top: 30vh;
+    animation:kiyasu 3s forwards;
+    opacity: 0;
+}
+.prof h2{
+    font-size: 5rem;
+    color: #fff;
+    padding-top: 10vh;
+}
+@keyframes kiyasu {
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+        transform: scale(1.8);
+        color:rgb(156, 255, 250);
+    }
+}
+@keyframes op {
+    0%{
+        transform: translateY(0);
+        transform-origin: top;
+    }
+    100%{
+        transform: translateY(0);
+        transform-origin: bottom;
+    }
+}
